@@ -1,0 +1,376 @@
+.filter-row {
+  display: flex !important;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  padding: 25px 0px;
+  margin-bottom: 10px;
+}
+
+.filter-row .filter-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.dx-treeview-search {
+  max-width: 400px;
+  position: absolute;
+  top: 20px;
+  right: 300px;
+}
+
+.dx-texteditor-input {
+  min-width: 300px;
+}
+
+.dx-treelist-header-panel {
+  position: absolute;
+  top: -55px;
+  left: 500px;
+}
+
+.drag-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.dx-treelist-headers {
+  display: none;
+}
+
+#employees {
+  max-height: 440px;
+}
+
+.dx-sortable-dragging {
+  opacity: 0.9;
+}
+
+.options {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(191, 191, 191, 0.15);
+  position: relative;
+}
+
+.caption {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.option {
+  margin-top: 10px;
+  margin-right: 40px;
+  display: inline-block;
+}
+
+.option:last-child {
+  margin-right: 0;
+}
+
+.options-container {
+  display: flex;
+  align-items: center;
+}
+
+// New drag styles
+.form {
+  display: flex;
+}
+
+.form>div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.dx-treeview-item {
+  box-sizing: border-box;
+}
+
+.drive-header {
+  min-height: auto;
+  padding: 0;
+  cursor: default;
+  margin-bottom: 10px;
+}
+
+.drive-panel {
+  padding: 20px 30px;
+  font-size: 115%;
+  font-weight: bold;
+  border-right: 1px solid rgba(165, 165, 165, 0.4);
+  height: 100%;
+}
+
+.drive-panel:last-of-type {
+  border-right: none;
+}
+
+.drag-wrapper-2 {
+  max-width: 900px;
+  margin: auto;
+  justify-content: center;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .dx-scrollable-container {
+    // overflow: visible;
+  }
+
+  .drive-panel {
+    width: 100%;
+
+    .dx-treeview {
+      ul {
+        li {
+          padding-left: 30px;
+
+          .dx-item {
+            min-height: 44px;
+            background-color: transparent;
+            display: inline-flex;
+            padding: 0px 10px;
+
+            &::before {
+              content: "";
+              position: absolute;
+              background-color: #ccc;
+              width: 50px;
+              height: 2px;
+              left: 36px;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              background-color: #ccc;
+              width: 2px;
+              height: 100%;
+              left: 36px;
+              top: 28px;
+            }
+
+            .dx-item-content {
+              order: 2;
+              display: inline-flex;
+              align-items: center;
+              gap: 10px;
+              border: 2px solid #ccc;
+              margin: 0;
+              padding-right: 20px;
+              margin: 5px 0px 0px;
+
+              span {
+                color: #000;
+              }
+
+              .dx-icon {
+                width: 44px;
+                height: 44px;
+                position: relative;
+                margin: 0;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 44px;
+                  height: 44px;
+                  background: #d9d9d9 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiI+PGcgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjIuOSIgPjxwYXRoIGQ9Ik0xNCAxNS43aDE0LjQiLz48cGF0aCBkPSJNMTQgMjEuNGgxNC40Ii8+PHBhdGggZD0iTTE0IDI3LjFoMTQuNCIvPjwvZz4KPC9zdmc+) no-repeat 50%;
+                  border-right: 1px solid #aaa;
+                  left: 0;
+                }
+              }
+            }
+
+            .dx-treeview-toggle-item-visibility {
+              &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 16px;
+                height: 16px;
+                box-shadow: 0 0 0 1px #000;
+                border-radius: 50px;
+                z-index: 9;
+                background: #fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGNpcmNsZSBjeD0iOSIgY3k9IjkiIHI9IjgiIGZpbGw9IiNGRkYiLz48ZyBzdHJva2U9IiM5ODk4OTgiIHN0cm9rZS13aWR0aD0iMS45IiA+PHBhdGggZD0iTTQuNSA5aDkiLz48cGF0aCBkPSJNOSA0LjV2OSIvPjwvZz4KPC9zdmc+) no-repeat 50%;
+                left: 0px;
+              }
+
+              &.dx-treeview-toggle-item-visibility-opened {
+                &::before {
+                  background: #fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCI+PGNpcmNsZSBjeD0iOSIgY3k9IjkiIHI9IjgiIGZpbGw9IiNGRkYiLz48ZyBzdHJva2U9IiM5ODk4OTgiIHN0cm9rZS13aWR0aD0iMS45IiA+PHBhdGggZD0iTTQuNSA5aDkiLz48L2c+Cjwvc3ZnPg==) no-repeat 50%;
+                }
+              }
+            }
+          }
+
+          .dx-treeview-node-container {
+            position: relative;
+            margin-bottom: -5px;
+
+            li {
+              border: none !important;
+
+              &.dx-treeview-node {
+                border: 1px solid #000;
+                position: relative;
+                margin: 10px 0px;
+              }
+            }
+          }
+
+          &[aria-expanded="false"] {
+            .dx-treeview-toggle-item-visibility {
+              &::before {
+                left: 30px;
+              }
+            }
+          }
+
+          &[aria-expanded="true"] {
+            >.dx-item {
+              position: relative;
+
+              &::after {
+                visibility: visible;
+                left: 6px;
+                height: 100%;
+                min-height: 200vh;
+                background: radial-gradient(#cccccc, #cccccc);
+              }
+
+              &::before {
+                left: 6px;
+              }
+
+              .dx-icon {
+                &::after {
+                  content: "";
+                  position: absolute;
+                  background: #cccccc;
+                  width: 2px;
+                  height: 100%;
+                  left: 20px;
+                  bottom: 0;
+                  min-height: 100vh;
+                  top: 45px;
+                }
+              }
+            }
+
+            .dx-treeview-node-container {
+              padding-left: 26px;
+
+              li {
+                .dx-item {
+                  &::after {
+                    height: 120%;
+                  }
+                }
+              }
+            }
+          }
+
+          ul.dx-treeview-node-container-opened {
+            li[aria-expanded="true"] {
+              >.dx-item {
+                position: initial;
+
+                &::after {
+                  visibility: visible !important;
+                  left: 36px;
+                }
+
+                &::before {
+                  left: 30px;
+                }
+
+                .dx-treeview-toggle-item-visibility {
+                  &::before {
+                    left: 30px;
+                  }
+                }
+              }
+            }
+          }
+
+          &:first-child {
+            .dx-item {
+              &::after {
+                visibility: visible;
+              }
+            }
+          }
+
+          &:last-child {
+            .dx-item {
+              &::after {
+                visibility: hidden;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dx-scrollable-content {
+  >ul {
+    >li+li {
+      >.dx-treeview-node-container {
+        padding-left: 26px;
+      }
+
+      &:last-child {
+        .dx-item {
+          &::after {
+            visibility: visible !important;
+            background-color: #cccccc !important;
+            height: 28px !important;
+            top: auto !important;
+            bottom: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dx-treeview-node-container-opened li:last-child .dx-treeview-item .dx-treeview-expander-icon-stub {
+  position: relative;
+}
+
+.dx-treeview-node-container-opened::after {
+  background-color: white;
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 52px;
+  left: 62px;
+  z-index: -1;
+  bottom: -13px;
+}
+
+.dx-treeview-node-container-opened::before {
+  background-color: #ffffff;
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 43px;
+  left: 62px;
+  z-index: 1;
+  bottom: -10px;
+}
+
+.dx-treeview-node-container-opened:first-child:before {
+  display: none;
+}
+
+.dx-treeview-node-container-opened li .dx-treeview-node-container-opened::before {
+  background-color: #ffffff;
+}
